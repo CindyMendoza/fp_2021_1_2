@@ -1,16 +1,22 @@
 package com.upc.selectivas;
 
 public class Ejercicio2 {
-    public static void main(String[] args) {
+    public static String obtenerTipoNumero(int numero){
         //if else anidado, se usa para seleccionar de más de dos alternativas
         //sólo una
-        int numero=-3;
+        String mensaje;
         if(numero>0){
-            System.out.println("Es positivo");
+            mensaje = "Es positivo";
         }else if (numero<0){
-            System.out.println("Es negativo");
+            mensaje = "Es negativo";
         }else{
-            System.out.println("Es Cero");
+           mensaje ="Es Cero";
         }
+        return mensaje;
+    }
+    public static void main(String[] args) {
+        String resultado;
+        resultado = obtenerTipoNumero(0);
+        System.out.println(resultado);
     }
 }
