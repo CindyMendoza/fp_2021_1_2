@@ -3,6 +3,7 @@ package com.upc.selectivas;
 import java.util.Scanner;
 
 public class Ejercicio3 {
+    //switch para seleccionar de varias alternativas sólo una
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int opcion = 9;//prueba unitaria
