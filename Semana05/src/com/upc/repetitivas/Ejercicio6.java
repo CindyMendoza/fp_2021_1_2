@@ -10,6 +10,15 @@ public class Ejercicio6 {
       3^3 + 6^3 + 9^3 ....+ n términos
   */
     public static void main(String[] args) {
-
+        System.out.println(obtenerSumaDigitos(233));
+    }
+    private static int obtenerSumaDigitos(int numero){
+        int digito, suma = 0;
+        while (numero>0){
+            digito = numero % 10;//3,1,2
+            suma+=digito;//3+1+2
+            numero = numero /10 ;//diversos cocientes 21,2
+        }
+        return suma;
     }
 }
