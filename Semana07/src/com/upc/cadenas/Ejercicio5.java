@@ -20,7 +20,10 @@ public class Ejercicio5 {
                 j++;
             }
         }
-        return temporal;
+        //Para que solo devuelva un arreglo sin valores nulos, esto es opcional para las prácticas/ex
+       String [] arrF = new String[j];
+        System.arraycopy(temporal, 0, arrF, 0, arrF.length);
+        return arrF;
     }
     private static int obtenerCantidadElementosArreglo(String[] codigos){
         return codigos.length;
