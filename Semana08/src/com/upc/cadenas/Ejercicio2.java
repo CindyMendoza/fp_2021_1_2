@@ -7,6 +7,38 @@ public class Ejercicio2 {
     public static void main(String[] args) {
         System.out.println(obtenerCantidadVehiculos("5"));
         System.out.println(obtenerTipoMenosTransita());
+        System.out.println("**** Sol 3 *****");
+        String [] placasRojasVerdes = obtenerStickerPalcas();
+        for(int i=0; i< placasRojasVerdes.length;i++){
+            System.out.println(placasRojasVerdes[i]);
+        }
+    }
+
+    private static String[] obtenerStickerPalcas(){
+        int contadorVerde=0;
+        int contadorRojo=0;
+        String[] newArrayPlacas = new String[placas.length];
+        int  j= 0;
+        for(int i=0; i<placas.length; i++){
+            if (placas[i].substring(5,6).equals("7") || placas[i].substring(5,6).equals("8")){
+                contadorVerde++;
+                newArrayPlacas[j] = placas[i];
+                j++;
+            }else if ( placas[i].substring(5,6).equals("9") || placas[i].substring(5,6).equals("0")){
+                contadorRojo++;
+                newArrayPlacas[j] = placas[i];
+                j++;
+            }
+        }
+        //Para que solo devuelva un arreglo sin valores nulos, esto es opcional para las prácticas/ex
+        String [] arrF = new String[j];
+        System.arraycopy(newArrayPlacas, 0, arrF, 0, arrF.length);
+        return arrF;
+    }
+
+    private static String[] obtenerListadoPlacasVerdeRojo(){
+
+        return null;
     }
 
     private static int obtenerCantidadVehiculos(String digito){
@@ -42,5 +74,7 @@ public class Ejercicio2 {
         }
         return tipoVehiculo;
     }
+
+
 
 }
