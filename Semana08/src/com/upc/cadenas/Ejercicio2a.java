@@ -27,7 +27,7 @@ public class Ejercicio2a {
         return tipoVehiculo;
     }
 
-    static String menorTipoVehiculoTransitadoXX(){
+    static String obtenerTiposMenosTransita2(){
         int menor=10000000;//supuesto falso
         String menorTipo = null;
         for (int i=0;i<autos.length ;i++ ) {
@@ -39,9 +39,21 @@ public class Ejercicio2a {
         return menorTipo;
     }
 
+    static String obtenerTiposMenosTransita3(){
+        String menorTransitado=autos[0];
+        for (int i=0;i<autos.length ;i++ ) {
+            for (int j=1;j<autos.length ;j++ ) {
+                if(calcularOcurrencias(menorTransitado)>calcularOcurrencias(autos[j]))
+                    menorTransitado=autos[i];
+            }
+        }return menorTransitado;
+
+    }
+
     public static void main(String[] args) {
         System.out.println(obtenerTipoMenosTransita());
-        System.out.println(menorTipoVehiculoTransitadoXX());
+        System.out.println(obtenerTiposMenosTransita2());
+        System.out.println(obtenerTiposMenosTransita3());//tarea
     }
 
 }
